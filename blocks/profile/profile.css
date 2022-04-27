@@ -1,0 +1,7 @@
+.profile {
+    display: flex;
+    align-items: center;
+    width: 68.75%;
+    max-height: 120px;
+    margin: 0 auto 51px;
+}
