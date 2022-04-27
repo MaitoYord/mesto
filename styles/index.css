@@ -24,7 +24,5 @@
 @import url(../blocks/elements/__element-label-like/elements__element-label-like.css);
 @import url(../blocks/elements/__element-like/elements__element-like.css);
 
-
-
-
-
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__sign/footer__sign.css);
