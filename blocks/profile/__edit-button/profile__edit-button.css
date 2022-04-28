@@ -8,7 +8,12 @@
     border: none;
     display: inline-block;
     padding: 0;
-    transition: .2s;
-    grid-area: button;
+    grid-area: edit-button;
+}
 
+@media screen and (max-width: 568px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+    }
 }

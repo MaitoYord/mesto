@@ -7,7 +7,12 @@
     background-repeat: no-repeat;
     border: 2px solid #fff;
     border-radius: 2px;
-    padding: 0;
-    transition: .2s;
-    margin-left: 244px;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 972px) {
+    .profile__add-button {
+        width: 100%;
+        margin: 0;
+    }
 }

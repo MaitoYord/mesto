@@ -5,5 +5,12 @@
     color: #fff;
     margin: 0;
     grid-area: passion;
+}
 
+@media screen and (max-width: 568px) {
+    .profile__passion {
+        font-size: 14px;
+        line-height: 1.21;
+        place-self: center;
+    }
 }
