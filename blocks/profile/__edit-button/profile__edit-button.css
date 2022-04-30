@@ -6,9 +6,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
-    display: inline-block;
-    padding: 0;
     grid-area: edit-button;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 568px) {
