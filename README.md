@@ -7,6 +7,6 @@ https://maitoyord.github.io/mesto/
 Профиль человека в сервисе mesto, который позволяет размещать фотографии/образы его путешествий и настроений.
 
 ## Используемые технологии
-*HTML / CSS / BEM
-*JavaScript
-*DOM
+* HTML / CSS / BEM
+* JavaScript
+* DOM
