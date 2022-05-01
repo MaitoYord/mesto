@@ -16,17 +16,16 @@ popupOpenBtn.addEventListener('click', function () {
 });
 
 popupClostBtn.addEventListener('click', function (event) {
-    // togglePopup();
     // popup.classList.toggle('popup_opened');
+    // либо
     // let currentPopup = event.target.closest('.popup');
     // currentPopup.classList.toggle('popup_opened');
     // либо
     let currentPopup = event.target.closest('.popup').classList.toggle('popup_opened');
-
 });
 
 popup.addEventListener('click', function (event) {
-    if (event.target == event.currentTarget) {
+    if (event.target == event.currentTarget && popup.classList.toggle('popup_opened')) {
         togglePopup(popup);
     }
 });
