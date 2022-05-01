@@ -1,0 +1,25 @@
+.profile__profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: 16px 18px;
+    align-content: center;
+    align-items: baseline;
+    grid-template-areas: 
+    "name edit-button"
+    "passion passion";
+}
+
+@media screen and (max-width: 972px) {
+    .profile__profile-info {
+        flex-direction: column;
+        margin-bottom: 36px;
+
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .profile__profile-info {
+        gap: 14px 10px;
+    }
+}

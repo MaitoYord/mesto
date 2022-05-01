@@ -9,9 +9,102 @@
     <title>Mesto</title>
 </head>
 
-<body>
+<body class="page">
 
+    <header class="header">
+        <img class="header__logo" src="images/mesto_logo.svg" alt="Логотип сайта Место.">
+    </header>
 
+    <main class="content">
+
+        <section class="profile">
+
+            <div class="profile__avatar">
+                <img class="profile__avatar-img" src="images/kusto.jpg" alt="Аватарка пользователя.">
+            </div>
+
+            <div class="profile__profile-info">
+                <p class="profile__name">Жак-Ив Кусто</p>
+                <p class="profile__passion">Исследователь океана</p>
+                <button class="profile__edit-button"></button>
+            </div>
+
+            <button class="profile__add-button"></button>
+
+        </section>
+
+        <section class="elements">
+
+            <article class="elements__element">
+                <img class="elements__element-img" src="images/miami.jpg" alt="Майами.">
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label">Майами</h2>
+                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                </div>
+            </article>
+
+            <article class="elements__element">
+                <img class="elements__element-img" src="images/long_island.jpg" alt="Бруклин.">
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label">Бруклин</h2>
+                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                </div>
+            </article>
+
+            <article class="elements__element">
+                <img class="elements__element-img" src="images/san_fierro.jpg" alt="Сан-Фиерро.">
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label">Сан-Фиерро</h2>
+                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                </div>
+            </article>
+
+            <article class="elements__element">
+                <img class="elements__element-img" src="images/vnovgorod.jpg" alt="Великий Новгород.">
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label">Новгород</h2>
+                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                </div>
+            </article>
+
+            <article class="elements__element">
+                <img class="elements__element-img" src="images/tbilisi.jpg" alt="Тбилиси.">
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label">Тбилиси</h2>
+                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                </div>
+            </article>
+
+            <article class="elements__element">
+                <img class="elements__element-img" src="images/irithyll_of_the_boreal_valley.jpg"
+                    alt="Иритилл Холодной долины.">
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label">Иритилл Холодной долины</h2>
+                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__sign">&#169; 2022 Mesto Russia</p>
+    </footer>
+
+    <div class="popup">
+        <form class="popup__container" action="">
+            <button class="popup__close-button" type="button">
+                <img class="popup__close-icon" src="images/close_icon.svg" alt="Кнопка закрыть.">
+            </button>
+            <h3 class="popup__header">Редактировать профиль</h3>
+            <input class="popup__name-input" type="text" name="Имя" value="Жак-Ив Кусто">
+            <input class="popup__passion-input" type="text" name="Специальность" value="Исследователь океана">
+            <button class="popup__submit" type="submit">Сохранить</button>
+        </form>
+    </div>
+
+    <script src="script/script.js"></script>
 </body>
 
 </html>
