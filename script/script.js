@@ -6,8 +6,8 @@ let formElement = qs('.popup__container');
 let defaultName = qs('.profile__name');
 let defaultPassion = qs('.profile__passion');
 
-let nameInput = qs('.popup__name-input');
-let passionInput = qs('.popup__passion-input');
+let nameInput = qs('.popup_input_name');
+let passionInput = qs('.popup_input_passion');
 
 function qs(selector) {
     return document.querySelector(selector);
@@ -15,8 +15,6 @@ function qs(selector) {
 
 function togglePopup(popUpObj) {
     popUpObj.classList.toggle('popup_opened');
-    nameInput.value = defaultName.textContent;
-    passionInput.value = defaultPassion.textContent;
 }
 
 function formSubmitHandler(evt) {
@@ -28,6 +26,8 @@ function formSubmitHandler(evt) {
 
 popupOpenBtn.addEventListener('click', function () {
     togglePopup(popup);
+    nameInput.value = defaultName.textContent;
+    passionInput.value = defaultPassion.textContent;
     // popup.classList.toggle('popup_opened');
 });
 
