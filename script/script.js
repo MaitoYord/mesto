@@ -6,8 +6,8 @@ let formElement = qs('.popup__container');
 let defaultName = qs('.profile__name');
 let defaultPassion = qs('.profile__passion');
 
-let nameInput = qs('.popup_input_name');
-let passionInput = qs('.popup_input_passion');
+let nameInput = qs('.popup__input_text_name');
+let passionInput = qs('.popup__input_text_passion');
 
 function qs(selector) {
     return document.querySelector(selector);
