@@ -13,3 +13,10 @@
     transition: .3s;
     z-index: -1;
 }
+
+@media screen and (max-width: 568px) {
+    .popup {
+        align-items: baseline;
+
+    }
+}
