@@ -51,3 +51,29 @@ function formSubmitHandler(evt) {
 formElement.addEventListener('submit', formSubmitHandler);
 
 
+const initialCards = [
+    {
+        name: 'Майами',
+        link: 'images/miami.jpg'
+    },
+    {
+        name: 'Бруклин',
+        link: 'images/brooklyn.jpg'
+    },
+    {
+        name: 'Сан-Фиерро',
+        link: 'images/san_fierro.jpg'
+    },
+    {
+        name: 'Новгород',
+        link: 'images/like.svg'
+    },
+    {
+        name: 'Тбилиси',
+        link: 'images/tbilisi.jpg'
+    },
+    {
+        name: 'Иритилл Холодной долины',
+        link: 'images/irithyll_of_the_boreal_valley.jpg'
+    }
+];
