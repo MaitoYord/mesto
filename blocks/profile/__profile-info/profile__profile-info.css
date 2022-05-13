@@ -1,4 +1,5 @@
 .profile__profile-info {
+    max-width: 334.83px;
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-auto-rows: minmax(min-content, max-content);
@@ -8,6 +9,9 @@
     grid-template-areas: 
     "name edit-button"
     "passion passion";
+
+
+
 }
 
 @media screen and (max-width: 972px) {

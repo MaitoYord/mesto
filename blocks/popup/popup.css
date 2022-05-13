@@ -1,5 +1,8 @@
 .popup {
     /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: -1;
     position: fixed;
     top: 0;
@@ -9,4 +12,11 @@
     background-color: rgba(0, 0, 0, .5);
     transition: .3s;
     z-index: -1;
+}
+
+@media screen and (max-width: 568px) {
+    .popup {
+        align-items: baseline;
+
+    }
 }

@@ -1,4 +1,4 @@
-.popup__passion-input {
+.popup__input {
     width: 83.3%;
     font-size: 14px;
     line-height: 1.21;
@@ -6,4 +6,9 @@
     color: #000;
     padding-bottom: 13px;
     border: none;
-    border-bottom: 1px solid rgba(0,0,0,.2);}
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.popup__input:first-of-type {
+    margin-bottom: 27px;
+}

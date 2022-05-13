@@ -19,17 +19,15 @@
 
         <section class="profile">
 
-            <div class="profile__avatar">
-                <img class="profile__avatar-img" src="images/kusto.jpg" alt="Аватарка пользователя.">
-            </div>
+            <img class="profile__avatar-img" src="images/kusto.jpg" alt="Аватарка пользователя.">
 
             <div class="profile__profile-info">
-                <p class="profile__name">Жак-Ив Кусто</p>
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <p class="profile__passion">Исследователь океана</p>
-                <button class="profile__edit-button"></button>
+                <button type="button" class="profile__edit-button"></button>
             </div>
 
-            <button class="profile__add-button"></button>
+            <button type="button" class="profile__add-button"></button>
 
         </section>
 
@@ -39,7 +37,7 @@
                 <img class="elements__element-img" src="images/miami.jpg" alt="Майами.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Майами</h2>
-                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                    <button type="button" class="elements__element-like elements__element-like_active"></button>
                 </div>
             </article>
 
@@ -47,7 +45,7 @@
                 <img class="elements__element-img" src="images/brooklyn.jpg" alt="Бруклин.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Бруклин</h2>
-                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                    <button type="button" class="elements__element-like elements__element-like_active"></button>
                 </div>
             </article>
 
@@ -55,7 +53,7 @@
                 <img class="elements__element-img" src="images/san_fierro.jpg" alt="Сан-Фиерро.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Сан-Фиерро</h2>
-                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                    <button type="button" class="elements__element-like elements__element-like_active"></button>
                 </div>
             </article>
 
@@ -63,7 +61,7 @@
                 <img class="elements__element-img" src="images/vnovgorod.jpg" alt="Великий Новгород.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Новгород</h2>
-                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                    <button type="button" class="elements__element-like elements__element-like_active"></button>
                 </div>
             </article>
 
@@ -71,7 +69,7 @@
                 <img class="elements__element-img" src="images/tbilisi.jpg" alt="Тбилиси.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Тбилиси</h2>
-                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                    <button type="button" class="elements__element-like elements__element-like_active"></button>
                 </div>
             </article>
 
@@ -80,7 +78,7 @@
                     alt="Иритилл Холодной долины.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Иритилл Холодной долины</h2>
-                    <img class="elements__element-like elements__element-like_active" src="images/like.svg" alt="Лайк.">
+                    <button type="button" class="elements__element-like elements__element-like_active"></button>
                 </div>
             </article>
 
@@ -93,15 +91,16 @@
     </footer>
 
     <div class="popup">
-        <form class="popup__container" action="">
-            <button class="popup__close-button" type="button">
-                <img class="popup__close-icon" src="images/close_icon.svg" alt="Кнопка закрыть.">
-            </button>
-            <h3 class="popup__header">Редактировать профиль</h3>
-            <input class="popup__name-input" type="text" name="Имя" value="Жак-Ив Кусто">
-            <input class="popup__passion-input" type="text" name="Специальность" value="Исследователь океана">
-            <button class="popup__submit" type="submit">Сохранить</button>
-        </form>
+        <div class="popup__container">
+            <button type="button" class="popup__close-button"></button>
+            <form class="popup__form" name="form">
+                <h3 class="popup__header">Редактировать профиль</h3>
+                <input type="text" class="popup__input popup__input_text_name" name="name">
+                <input type="text" class="popup__input popup__input_text_passion" name="passion">
+                <button type="submit" class="popup__submit">Сохранить</button>
+            </form>
+
+        </div>
     </div>
 
     <script src="script/script.js"></script>

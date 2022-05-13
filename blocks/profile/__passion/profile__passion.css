@@ -1,14 +1,20 @@
 .profile__passion {
+    max-width: 336px;
     font-size: 18px;
     line-height: 1.22;
     font-weight: 400;
     color: #fff;
     margin: 0;
     grid-area: passion;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 568px) {
     .profile__passion {
+        max-width: 282px;
         font-size: 14px;
         line-height: 1.21;
         place-self: center;
