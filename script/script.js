@@ -39,46 +39,6 @@ popup.addEventListener('click', function (event) {
         closePopup();
     }
 });
-////////////////////////////////////////////////////
-
-// function togglePopup(popUpObj) {
-//     popUpObj.classList.toggle('popup_opened');
-
-// }
-
-// function formSubmitHandler(evt) {
-//     evt.preventDefault();
-//     defaultName.textContent = nameInput.value;
-//     defaultPassion.textContent = passionInput.value;
-//     togglePopup(popup);
-// }
-
-// nameInput.value = defaultName.textContent;
-// passionInput.value = defaultPassion.textContent;
-
-// popupOpenBtn.addEventListener('click', function () {
-//     togglePopup(popup);
-//     // popup.classList.toggle('popup_opened');
-// });
-
-// popupClostBtn.addEventListener('click', function (event) {
-//     togglePopup(popup);
-//     // popup.classList.toggle('popup_opened');
-//     // либо
-//     // let currentPopup = event.target.closest('.popup');
-//     // currentPopup.classList.toggle('popup_opened');
-//     // либо
-//     // let currentPopup = event.target.closest('.popup').classList.toggle('popup_opened');
-// });
-
-// popup.addEventListener('click', function (event) {
-//     if (event.target == event.currentTarget && popup.classList.toggle('popup_opened')) {
-//         togglePopup(popup);
-//     }
-// });
-
-// formElement.addEventListener('submit', formSubmitHandler);
-
 
 const initialCards = [
     {
