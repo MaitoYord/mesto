@@ -1,6 +1,6 @@
-let popup = qs('.popup_type_edit-profile, .popup_type_add-place');
-let popupOpenBtn = qs('.profile__edit-button, .profile__add-button');
-let popupClostBtn = qs('.popup__close-button');
+let popup = qs('.popup_type_edit-profile');
+let popupOpenBtn = qs('.profile__edit-button');
+let popupClostBtn = qs('.popup__close-button_type_edit-profile');
 let formElement = qs('.popup__container');
 
 let defaultName = qs('.profile__name');
@@ -37,6 +37,29 @@ formElement.addEventListener('submit', formSubmitHandler);
 popup.addEventListener('click', function (event) {
     if (event.target == event.currentTarget && popup.classList.contains('popup_opened')) {
         closePopup();
+    }
+});
+
+//======================================================================================
+
+const popupAdd = qs('.popup_type_add-place');
+const popupAddBtn = qs('.profile__add-button');
+const popupAddClostBtn = qs('.popup__close-button_type_add-place');
+
+function openPopupAdd() {
+    popupAdd.classList.add('popup_opened');
+}
+
+function closePopupAdd() {
+    popupAdd.classList.remove('popup_opened');
+}
+
+popupAddBtn.addEventListener('click', openPopupAdd);
+popupAddClostBtn.addEventListener('click', closePopupAdd);
+
+popupAdd.addEventListener('click', function (event) {
+    if (event.target == event.currentTarget && popupAdd.classList.contains('popup_opened')) {
+        closePopupAdd();
     }
 });
 
