@@ -1,5 +1,5 @@
-let popup = qs('.popup');
-let popupOpenBtn = qs('.profile__edit-button');
+let popup = qs('.popup_type_edit-profile, .popup_type_add-place');
+let popupOpenBtn = qs('.profile__edit-button, .profile__add-button');
 let popupClostBtn = qs('.popup__close-button');
 let formElement = qs('.popup__container');
 
@@ -39,7 +39,7 @@ popup.addEventListener('click', function (event) {
         closePopup();
     }
 });
-  ////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
 // function togglePopup(popUpObj) {
 //     popUpObj.classList.toggle('popup_opened');
@@ -106,3 +106,4 @@ const initialCards = [
         link: 'images/irithyll_of_the_boreal_valley.jpg'
     }
 ];
+

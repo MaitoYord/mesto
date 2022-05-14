@@ -90,7 +90,7 @@
         <p class="footer__sign">&#169; 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup_type_edit-profile">
         <div class="popup__container">
             <button type="button" class="popup__close-button"></button>
             <form class="popup__form" name="form">
@@ -99,7 +99,18 @@
                 <input type="text" class="popup__input popup__input_text_passion" name="passion">
                 <button type="submit" class="popup__submit">Сохранить</button>
             </form>
+        </div>
+    </div>
 
+    <div class="popup popup_type_add-place">
+        <div class="popup__container">
+            <button type="button" class="popup__close-button"></button>
+            <form class="popup__form" name="form">
+                <h3 class="popup__header">Новое место</h3>
+                <input type="text" class="popup__input popup__input_text_name" name="name">
+                <input type="text" class="popup__input popup__input_text_passion" name="link">
+                <button type="submit" class="popup__submit">Сохранить</button>
+            </form>
         </div>
     </div>
 
