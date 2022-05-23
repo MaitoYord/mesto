@@ -1,0 +1,18 @@
+.elements__element-trashcan {
+        width: 18px;
+        height: 19px;
+        background-image: url(../../../images/trashcan.svg);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+      }
+      
+      .elements__element-trashcan:hover {
+      opacity: .6;
+}

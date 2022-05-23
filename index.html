@@ -34,55 +34,73 @@
         <section class="elements">
 
             <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/miami.jpg" alt="Майами.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Майами</h2>
-                    <button type="button" class="elements__element-like elements__element-like_active"></button>
+                    <button type="button" class="elements__element-like"></button>
                 </div>
             </article>
 
             <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/brooklyn.jpg" alt="Бруклин.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Бруклин</h2>
-                    <button type="button" class="elements__element-like elements__element-like_active"></button>
+                    <button type="button" class="elements__element-like"></button>
                 </div>
             </article>
 
             <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/san_fierro.jpg" alt="Сан-Фиерро.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Сан-Фиерро</h2>
-                    <button type="button" class="elements__element-like elements__element-like_active"></button>
+                    <button type="button" class="elements__element-like"></button>
                 </div>
             </article>
 
             <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/vnovgorod.jpg" alt="Великий Новгород.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Новгород</h2>
-                    <button type="button" class="elements__element-like elements__element-like_active"></button>
+                    <button type="button" class="elements__element-like"></button>
                 </div>
             </article>
 
             <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/tbilisi.jpg" alt="Тбилиси.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Тбилиси</h2>
-                    <button type="button" class="elements__element-like elements__element-like_active"></button>
+                    <button type="button" class="elements__element-like"></button>
                 </div>
             </article>
 
             <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/irithyll_of_the_boreal_valley.jpg"
                     alt="Иритилл Холодной долины.">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label">Иритилл Холодной долины</h2>
-                    <button type="button" class="elements__element-like elements__element-like_active"></button>
+                    <button type="button" class="elements__element-like"></button>
                 </div>
             </article>
 
         </section>
+
+        <template class="elements-template">
+            <article class="elements__element">
+                <button class="elements__element-trashcan"></button>
+                <img class="elements__element-img" src alt>
+                <div class="elements__element-label-like">
+                    <h2 class="elements__element-label"></h2>
+                    <button type="button" class="elements__element-like"></button>
+                </div>
+            </article>
+        </template>
+
 
     </main>
 
@@ -91,7 +109,7 @@
     </footer>
 
     <div class="popup popup_type_edit-profile">
-        <div class="popup__container">
+        <div class="popup__container popup__container_type_edit-profile">
             <button type="button" class="popup__close-button popup__close-button_type_edit-profile"></button>
             <form class="popup__form" name="form">
                 <h3 class="popup__header">Редактировать профиль</h3>
@@ -103,13 +121,14 @@
     </div>
 
     <div class="popup popup_type_add-place">
-        <div class="popup__container">
+        <div class="popup__container popup__container_type_add-place">
             <button type="button" class="popup__close-button popup__close-button_type_add-place"></button>
             <form class="popup__form" name="form">
                 <h3 class="popup__header">Новое место</h3>
-                <input type="text" class="popup__input popup__input_text_name" name="name">
-                <input type="text" class="popup__input popup__input_text_passion" name="link">
-                <button type="submit" class="popup__submit">Сохранить</button>
+                <input type="text" class="popup__input popup__input_place_name" name="name" placeholder="Название">
+                <input type="text" class="popup__input popup__input_place_url" name="link"
+                    placeholder="Ссылка на картинку">
+                <button type="submit" class="popup__submit">Создать</button>
             </form>
         </div>
     </div>
