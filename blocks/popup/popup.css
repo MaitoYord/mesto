@@ -12,7 +12,10 @@
     background-color: rgba(0, 0, 0, .5);
     transition: .3s;
     z-index: -1;
+    transition: visibility 0s, opacity 0.2s linear;
+
 }
+
 
 @media screen and (max-width: 568px) {
     .popup {

@@ -1,0 +1,6 @@
+.popup__close-button_type_img {
+    position: relative;
+    align-self: flex-end;
+    top: -7px;
+    right: -38px;
+}

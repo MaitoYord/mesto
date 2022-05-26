@@ -1,0 +1,27 @@
+    .popup__img-cover {
+        max-width: 75vw;
+        max-height: 75vh;
+        object-fit:contain;
+    }
+/* 
+    @media screen and (max-width: 1100px) {
+        .popup__img-cover {
+            max-width: 816px;
+        }
+    }
+    @media screen and (max-width: 840px) {
+        .popup__img-cover {
+            max-width: 560px;
+        }
+    }
+        @media screen and (max-width: 600px) {
+            .popup__img-cover {
+                max-width: 453px;
+            }
+    }
+
+    @media screen and (max-width: 480px) {
+        .popup__img-cover {
+            max-width: 300px;
+        }
+    } */

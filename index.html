@@ -33,7 +33,7 @@
 
         <section class="elements">
 
-            <article class="elements__element">
+            <!-- <article class="elements__element">
                 <button class="elements__element-trashcan"></button>
                 <img class="elements__element-img" src="images/miami.jpg" alt="Майами.">
                 <div class="elements__element-label-like">
@@ -86,14 +86,14 @@
                     <h2 class="elements__element-label">Иритилл Холодной долины</h2>
                     <button type="button" class="elements__element-like"></button>
                 </div>
-            </article>
+            </article> -->
 
         </section>
 
         <template class="elements-template">
             <article class="elements__element">
                 <button class="elements__element-trashcan"></button>
-                <img class="elements__element-img" src alt>
+                <img class="elements__element-img" src alt="">
                 <div class="elements__element-label-like">
                     <h2 class="elements__element-label"></h2>
                     <button type="button" class="elements__element-like"></button>
@@ -109,9 +109,9 @@
     </footer>
 
     <div class="popup popup_type_edit-profile">
-        <div class="popup__container popup__container_type_edit-profile">
+        <div class="popup__container">
             <button type="button" class="popup__close-button popup__close-button_type_edit-profile"></button>
-            <form class="popup__form" name="form">
+            <form class="form form_type_edit-profile" name="form">
                 <h3 class="popup__header">Редактировать профиль</h3>
                 <input type="text" class="popup__input popup__input_text_name" name="name">
                 <input type="text" class="popup__input popup__input_text_passion" name="passion">
@@ -121,9 +121,9 @@
     </div>
 
     <div class="popup popup_type_add-place">
-        <div class="popup__container popup__container_type_add-place">
+        <div class="popup__container">
             <button type="button" class="popup__close-button popup__close-button_type_add-place"></button>
-            <form class="popup__form" name="form">
+            <form class="form form_type_add-card" name="form">
                 <h3 class="popup__header">Новое место</h3>
                 <input type="text" class="popup__input popup__input_place_name" name="name" placeholder="Название">
                 <input type="text" class="popup__input popup__input_place_url" name="link"
@@ -131,6 +131,14 @@
                 <button type="submit" class="popup__submit">Создать</button>
             </form>
         </div>
+    </div>
+
+    <div class="popup popup_type_img">
+        <figure class="popup__container_img">
+            <button type="button" class="popup__close-button popup__close-button_type_img"></button>
+            <img class="popup__img-cover" src="#" alt="Фото.">
+            <p class="popup__img-caption"></p>
+        </figure>
     </div>
 
     <script src="script/script.js"></script>

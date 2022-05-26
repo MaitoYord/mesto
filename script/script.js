@@ -1,7 +1,7 @@
 let popupEditProfile = qs('.popup_type_edit-profile');
 let popupEditProfileBtn = qs('.profile__edit-button');
 let popupEditProfileClostBtn = qs('.popup__close-button_type_edit-profile');
-let formElementEditProfile = qs('.popup__container_type_edit-profile');
+let formElementEditProfile = qs('.form_type_edit-profile');
 
 let defaultName = qs('.profile__name');
 let defaultPassion = qs('.profile__passion');
@@ -40,7 +40,24 @@ popupEditProfile.addEventListener('click', event => {
     }
 });
 
-//======================================================================================
+//===================================5ая ПР===================================
+
+let popupAdd = qs('.popup_type_add-place');
+let popupAddBtn = qs('.profile__add-button');
+let popupAddClostBtn = qs('.popup__close-button_type_add-place');
+
+let popupImg = qs('.popup_type_img');
+let popupImgBtn = qs('.popup_type_img');
+let popupImgCover = qs('.popup__img-cover');
+let popupImgCaption = qs('.popup__img-caption');
+let popupImgClostBtn = qs('.popup__close-button_type_img');
+
+let namePlaceInput = qs('.popup__input_place_name');
+let linkPlaceInput = qs('.popup__input_place_url');
+let formElementAddCard = qs('.form_type_add-card');
+
+let elements = qs('.elements');
+let formElementAdd = qs('.popup__container_type_add-place');
 
 const initialCards = [
     {
@@ -69,12 +86,42 @@ const initialCards = [
     }
 ];
 
-let popupAdd = qs('.popup_type_add-place');
-let popupAddBtn = qs('.profile__add-button');
-let popupAddClostBtn = qs('.popup__close-button_type_add-place');
-let formElementAdd = qs('.popup__container_type_add-place');
-let template = qs('.elements-template');
+function getNewElement(card) {
+    let newElement = document.querySelector('.elements-template').content.querySelector('.elements__element').cloneNode(true);
+    let newElementlabel = newElement.querySelector('.elements__element-label');
+    newElementlabel.textContent = card.name;
+    let newElementImg = newElement.querySelector('.elements__element-img');
+    newElementImg.src = card.link;
+    newElement.querySelector('.elements__element-like').addEventListener('click', function (evt) {
+        evt.target.classList.toggle('elements__element-like_active');
+    });
+    newElement.querySelector('.elements__element-trashcan').addEventListener('click', () => {
+        newElement.remove();
+    });
+    newElementImg.addEventListener('click', (evt) => {
+        openPopupImg();
+        popupImgCover.src = evt.target.src;
+        popupImgCaption.textContent = newElement.textContent;
+    });
+    popupImgClostBtn.addEventListener('click', closePopupImg);
+    return newElement;
+}
 
+function insertNewElement(element) {
+    elements.append(getNewElement(element));
+}
+
+initialCards.forEach(function (card) {
+    insertNewElement(card);
+});
+
+function openPopupImg() {
+    popupImgBtn.classList.add('popup_opened');
+}
+
+function closePopupImg() {
+    popupImgBtn.classList.remove('popup_opened');
+}
 
 function openPopupAdd() {
     popupAdd.classList.add('popup_opened');
@@ -84,48 +131,29 @@ function closePopupAdd() {
     popupAdd.classList.remove('popup_opened');
 }
 
-function formAddSubmitHandler(evt) {
-
+function formAddCardSubmitHandler(evt) {
+    evt.preventDefault();
+    let card = {};
+    card.name = namePlaceInput.value;
+    card.link = linkPlaceInput.value;
+    insertNewElement(card);
+    closePopupAdd();
 }
-
-let getNewElement = (title) => {
-    let newElement = template.content.cloneNode(true);
-    let newElementlabel = newElement.qs('.elements__element-label');
-    newElementlabel.textContent = title;
-    return newElement;
-};
 
 popupAddBtn.addEventListener('click', openPopupAdd);
 popupAddClostBtn.addEventListener('click', closePopupAdd);
-
 popupAdd.addEventListener('click', event => {
     if (event.target == event.currentTarget && popupAdd.classList.contains('popup_opened')) {
         closePopupAdd();
     }
 });
+formElementAddCard.addEventListener('submit', formAddCardSubmitHandler);
 
-
-// const zzz = [
-//     'Майами', 'Бруклин', 'Новгород', 'Тбилиси', 'asdf',
-
-// ];
-
-// const wrapElements = qs('.elements');
-
-// const insertStuff = (wrap, cardName) => {
-//     wrap.insertAdjacentHTML('beforeend',
-//         `<article class="elements__element">
-// <img class="elements__element-img" src="images/brooklyn.jpg" alt="Бруклин.">
-// <div class="elements__element-label-like">
-//     <h2 class="elements__element-label">${cardName}</h2>
-//     <button type="button" class="elements__element-like elements__element-like_active"></button>
-// </div>
-// </article>`);
-// }
-
-// zzz.forEach((item) => {
-//     insertStuff(wrapElements, item);
-// });
+popupImg.addEventListener('click', event => {
+    if (event.target == event.currentTarget && popupImg.classList.contains('popup_opened')) {
+        closePopupImg();
+    }
+});
 
 
 
