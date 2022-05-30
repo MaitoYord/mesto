@@ -20,8 +20,6 @@
         <section class="profile">
 
             <img class="profile__avatar-img" src="images/kusto.jpg" alt="Аватарка пользователя.">
-            <img class="profile__avatar-img" src="images/kusto.jpg" alt="Аватарка пользователя.">
-
 
             <div class="profile__profile-info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -115,9 +113,9 @@
             <button type="button" class="popup__close-button popup__close-button_type_edit-profile"></button>
             <form class="form form_type_edit-profile" name="form">
                 <h3 class="popup__header">Редактировать профиль</h3>
-                <input type="text" class="popup__input popup__input_text_name" name="name">
-                <input type="text" class="popup__input popup__input_text_passion" name="passion">
-                <button type="submit" class="popup__submit">Сохранить</button>
+                <input type="text" class="popup__input popup__input_text_name form__input" name="name">
+                <input type="text" class="popup__input popup__input_text_passion form__input" name="passion">
+                <button type="submit" class="popup__submit form__submit">Сохранить</button>
             </form>
         </div>
     </div>
@@ -127,10 +125,11 @@
             <button type="button" class="popup__close-button popup__close-button_type_add-place"></button>
             <form class="form form_type_add-card" name="form">
                 <h3 class="popup__header">Новое место</h3>
-                <input type="text" class="popup__input popup__input_place_name" name="name" placeholder="Название">
-                <input type="text" class="popup__input popup__input_place_url" name="link"
+                <input type="text" class="popup__input popup__input_place_name form__input" name="name"
+                    placeholder="Название">
+                <input type="text" class="popup__input popup__input_place_url form__input" name="link"
                     placeholder="Ссылка на картинку">
-                <button type="submit" class="popup__submit">Создать</button>
+                <button type="submit" class="popup__submit form__submit">Создать</button>
             </form>
         </div>
     </div>
