@@ -4,3 +4,10 @@
     top: -7px;
     right: -38px;
 }
+
+@media screen and (max-width: 600px) {
+    .popup__close-button_type_img {
+        top: -19px;
+        right: 0;    
+    }
+}
