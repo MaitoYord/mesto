@@ -69,6 +69,24 @@ function closePopup(popup) {
     popup.classList.remove('popup_opened');
 };
 
+function closePopupEditProfileEsc() {
+    document.addEventListener('keydown', (evt) => {
+        if (evt.key === "Escape") closePopup(popupEditProfile);
+    });
+};
+
+function closePopupAddEsc() {
+    document.addEventListener('keydown', (evt) => {
+        if (evt.key === "Escape") closePopup(popupAdd);
+    });
+};
+
+function closePopupImgEsc() {
+    document.addEventListener('keydown', (evt) => {
+        if (evt.key === "Escape") closePopup(popupImg);
+    });
+};
+
 function handlerFormEditProfileSubmit(evt) {
     evt.preventDefault();
     defaultName.textContent = nameInput.value;
@@ -94,6 +112,7 @@ function getNewElement(card) {
         popupImgCaption.textContent = newElement.textContent;
         openPopup(popupImg);
     });
+    closePopupImgEsc();
     return newElement;
 };
 
@@ -119,7 +138,10 @@ popupEditProfileBtn.addEventListener('click', () => {
     nameInput.value = defaultName.textContent;
     passionInput.value = defaultPassion.textContent;
     openPopup(popupEditProfile);
+    checkValidity(config, popupEditProfile);
+    closePopupEditProfileEsc();
 });
+
 
 popupEditProfileClostBtn.addEventListener('click', () => {
     closePopup(popupEditProfile);
@@ -135,6 +157,8 @@ formElementEditProfile.addEventListener('submit', handlerFormEditProfileSubmit);
 
 popupAddBtn.addEventListener('click', () => {
     openPopup(popupAdd);
+    checkValidity(config, popupAdd);
+    closePopupAddEsc();
 });
 
 popupAddClostBtn.addEventListener('click', () => {
