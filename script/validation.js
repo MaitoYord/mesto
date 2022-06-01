@@ -5,7 +5,7 @@ const config = {
     inactiveBtnClass: 'form__submit_inactive',
     inputErrClass: 'popup__input_type_err',
     errClass: 'popup__err_active'
-}
+};
 
 const showInputErr = (formElement, inputElement, errMessage, inputErrClass, errClass) => {
     const errElement = formElement.querySelector(`.${inputElement.name}-err`);
