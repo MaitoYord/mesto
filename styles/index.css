@@ -53,5 +53,7 @@
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/__submit/_inactive/form__submit_inactive.css);
+@import url(../blocks/form/__submit/_hover/form__submit_hover);
+@import url(../blocks/form/__input-err/form__input-err.css);
 
 

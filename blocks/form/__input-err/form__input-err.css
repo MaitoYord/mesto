@@ -1,0 +1,17 @@
+.form__input-err {
+    width: 83.3%;
+    padding-top: 5px;
+    box-sizing: border-box;
+    align-self: flex-start;
+    margin-left: 36px;
+  } 
+
+  @media screen and (max-width: 568px) {
+    .form__input-err {
+      margin:auto;
+    }
+}
+
+  /* .form__input-err:last-of-type {
+    padding-bottom: 31.34px;
+} */
