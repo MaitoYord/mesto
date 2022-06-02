@@ -63,29 +63,38 @@ const initialCards = [
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupEsc);
 };
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupEsc);
 };
 
-function closePopupEditProfileEsc() {
-    document.addEventListener('keydown', (evt) => {
-        if (evt.key === "Escape") closePopup(popupEditProfile);
-    });
+function closePopupEsc(evt) {
+    if (evt.key === "Escape") {
+        const popupOpened = document.querySelector('.popup_opened');
+        closePopup(popupOpened);
+    }
 };
 
-function closePopupAddEsc() {
-    document.addEventListener('keydown', (evt) => {
-        if (evt.key === "Escape") closePopup(popupAdd);
-    });
-};
+// function closePopupEditProfileEsc() {
+//     document.addEventListener('keydown', (evt) => {
+//         if (evt.key === "Escape") closePopup(popupEditProfile);
+//     });
+// };
 
-function closePopupImgEsc() {
-    document.addEventListener('keydown', (evt) => {
-        if (evt.key === "Escape") closePopup(popupImg);
-    });
-};
+// function closePopupAddEsc() {
+//     document.addEventListener('keydown', (evt) => {
+//         if (evt.key === "Escape") closePopup(popupAdd);
+//     });
+// };
+
+// function closePopupImgEsc() {
+//     document.addEventListener('keydown', (evt) => {
+//         if (evt.key === "Escape") closePopup(popupImg);
+//     });
+// };
 
 function handlerFormEditProfileSubmit(evt) {
     evt.preventDefault();
@@ -109,10 +118,11 @@ function getNewElement(card) {
     });
     newElementImg.addEventListener('click', (evt) => {
         popupImgCover.src = evt.target.src;
+        popupImgCover.alt = evt.target.alt;
         popupImgCaption.textContent = newElement.textContent;
         openPopup(popupImg);
     });
-    closePopupImgEsc();
+    // closePopupImgEsc();
     return newElement;
 };
 
@@ -139,7 +149,7 @@ popupEditProfileBtn.addEventListener('click', () => {
     passionInput.value = defaultPassion.textContent;
     openPopup(popupEditProfile);
     checkValidity(config, popupEditProfile);
-    closePopupEditProfileEsc();
+    // closePopupEditProfileEsc();
 });
 
 
@@ -158,7 +168,7 @@ formElementEditProfile.addEventListener('submit', handlerFormEditProfileSubmit);
 popupAddBtn.addEventListener('click', () => {
     openPopup(popupAdd);
     checkValidity(config, popupAdd);
-    closePopupAddEsc();
+    // closePopupAddEsc();
 });
 
 popupAddClostBtn.addEventListener('click', () => {

@@ -39,12 +39,12 @@ const toggleButtonState = (formElement, inputList, submitBtnSelector, inactiveBt
     const buttonElement = formElement.querySelector(submitBtnSelector);
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(inactiveBtnClass);
-        buttonElement.classList.remove('form__submit_hover');
         buttonElement.setAttribute('disabled', true);
+        buttonElement.style.pointerEvents = "none";
     } else {
         buttonElement.classList.remove(inactiveBtnClass);
-        buttonElement.classList.add('form__submit_hover');
         buttonElement.removeAttribute('disabled');
+        buttonElement.style.pointerEvents = "auto";
     };
 }
 
